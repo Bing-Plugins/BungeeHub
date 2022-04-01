@@ -1,5 +1,8 @@
 # BungeeHub
- Server grouping /hub and /lobby command
+![GitHub](https://img.shields.io/github/license/BingYanchi/BungeeHub)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/BingYanchi/BungeeHub?include_prereleases)
+
+Server grouping /hub and /lobby command
 
 **This plugin only needs to be installed in BungeeCord/Waterfall.**
 
