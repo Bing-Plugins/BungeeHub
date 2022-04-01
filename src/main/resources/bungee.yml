@@ -1,0 +1,5 @@
+name: ${project.name}
+main: cn.yistars.hub.Hub
+version: ${project.version}
+author: Bing_Yanchi
+softdepend: [ServerQueue]

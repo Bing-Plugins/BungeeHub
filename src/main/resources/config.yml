@@ -1,0 +1,45 @@
+# Debug mode
+DebugMode: false
+
+# Update Check
+CheckUpdate: true
+
+# Need bungeehub.use permission to use /hub
+NeedPermission: false
+
+# Command used to go to the lobby
+Commands:
+  hub: true
+  lobby: false
+
+# Blacklist servers (this plugin function cannot be used when a server is specified)
+BlackServer:
+  - BLACKSERVER
+  - LOGINSERVER
+
+# Default server group
+DefaultGroup: lobby
+
+# Server group
+# type: SERVER COMMAND QUEUE
+Group:
+  lobby:
+    name: "Lobby"
+    type: "SERVER"
+
+  bw_lobby:
+    name: "%name%"
+    type: COMMAND
+    command:
+      - "bungeecommand %player% queue Bw_Lobby"
+    server:
+      - bw_1
+      - bw_2
+
+  mm_lobby:
+    name: "%name% Lobby"
+    type: SERVER
+    server:
+      - mm_1
+      - mm_2
+      - mm_3

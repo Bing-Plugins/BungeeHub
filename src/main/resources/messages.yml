@@ -1,0 +1,27 @@
+# 插件运行
+Enabled: "Enabled successfully."
+Loaded: "Loaded successfully."
+Disabled: "Disabled successfully."
+
+# 设置为 "" 不发送消息
+# 玩家
+UseHub: "&a传送到 %group%&a..."
+NoPermission: "&c无权操作"
+BlackServer: "&c当前服务器无法使用此功能"
+
+# 管理员
+Reload: "&a重载配置文件成功"
+Console: "此命令必须在游戏中执行."
+
+# 检查更新
+Checking: "&7正在检查更新..."
+NoUpdate: "&a当前使用的版本已是最新版本."
+Update: "&a[BungeeHub] &e检测到新版本 &bv%new_version%&e, 当前版本: &bv%old_version%"
+UpdatePage: "&a插件页面: &e%url%"
+UpdateDownload: "&a下载地址: &e%url%"
+
+# 帮助
+HelpTitle: "&aBungeeHub v%version% 帮助信息:"
+HelpHelp: "&a/bungeehub help &8- &7查看帮助"
+HelpCheck: "&a/bungeehub check &8- &7检查更新"
+HelpReload: "&a/bungeehub reload &8- &7重载配置文件"
