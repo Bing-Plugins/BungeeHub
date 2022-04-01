@@ -1,6 +1,6 @@
 # BungeeHub
-![GitHub](https://img.shields.io/github/license/BingYanchi/BungeeHub)
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/BingYanchi/BungeeHub?include_prereleases)
+[![GitHub](https://img.shields.io/github/license/BingYanchi/BungeeHub)](https://github.com/BingYanchi/BungeeHub/blob/main/LICENSE)
+[![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/BingYanchi/BungeeHub?include_prereleases)](https://github.com/BingYanchi/BungeeHub/releases/latest)
 
 Server grouping /hub and /lobby command
 
