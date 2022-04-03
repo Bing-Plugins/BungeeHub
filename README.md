@@ -33,7 +33,7 @@ bungeehub.use - Use /hub (Only when NeedPermission is enabled)
 bungeehub.admin - Use /bungeehub reload
 
 ## bStats
-![bStats](https://proxy.spigotmc.org/cec94ba04065c4996b86043e317b2e415642c713?url=https%3A%2F%2Fbstats.org%2Fsignatures%2Fbungeecord%2FBungeeHub.svg)
+![bStats](https://bstats.org/signatures/bungeecord/BungeeHub.svg)
 
 ## Note
 It is strictly forbidden to decompile/modify this plugin without my permission.
