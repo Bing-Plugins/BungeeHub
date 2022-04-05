@@ -1,11 +1,20 @@
 package cn.yistars.hub.api;
 
-import java.util.ArrayList;
-import java.util.List;
+import cn.yistars.hub.group.Group;
+import cn.yistars.hub.group.GroupManager;
+import net.md_5.bungee.api.connection.ProxiedPlayer;
 
-import cn.yistars.hub.Hub;
+public class HubHook {
+    public static GroupManager groupManager;
 
-public interface HubHook {
+    public static Group getServerGroup(String serverName) {
+        return groupManager.getServerGroup(serverName);
+    }
+
+    public static void goHub (ProxiedPlayer player, Group group) {
+        groupManager.goHub(player, group);
+    }
+
 	/*
 	static String getGroupName(String server) {
 
@@ -30,7 +39,6 @@ public interface HubHook {
 	  static String getDefaultGroup() {
 		  return Hub.DefaultGroup;
 	  }
-	  // TODO Command
 
 	 */
 }
