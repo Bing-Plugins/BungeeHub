@@ -51,6 +51,10 @@ public class GroupManager {
     }
 
     public void goHub(ProxiedPlayer player, Group group) {
+        if (group == null) {
+            group = DefaultGroup;
+        }
+
         switch (group.getType()) {
             case "SERVER":
                 ServerInfo server = ProxyServer.getInstance().getServerInfo(group.getName());
