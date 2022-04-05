@@ -1,5 +1,6 @@
 package cn.yistars.hub;
 
+import cn.yistars.hub.api.HubHook;
 import cn.yistars.hub.command.CommandManager;
 import cn.yistars.hub.command.HubAdminCommand;
 import cn.yistars.hub.config.ConfigManager;
@@ -15,12 +16,11 @@ import java.util.logging.Logger;
 
 public class Hub extends Plugin {
 	private final Logger logger = Logger.getLogger("BungeeHub");
-	private final GroupManager groupManager = new GroupManager(this.logger);
+	public final GroupManager groupManager = new GroupManager(this.logger);
 	private final ConfigManager configManager = new ConfigManager(groupManager, this, logger);
 	private final MessageManager messageManager = new MessageManager(this.configManager.getMessages());
 	private final UpdateChecker updateChecker = new UpdateChecker(this, this.messageManager, false);
 	private final CommandManager commandManager = new CommandManager(this.configManager, groupManager, this.messageManager, this.logger, this);
-
 
 	@Override
 	public void onEnable() {
@@ -28,10 +28,12 @@ public class Hub extends Plugin {
 		this.configManager.setUpdateChecker(this.updateChecker);
 		this.configManager.readConfig();
 
+		HubHook.groupManager = this.groupManager;
+
 		ProxyServer.getInstance().getPluginManager().registerCommand(this, new HubAdminCommand(this.messageManager, this.configManager, updateChecker, this.getProxy().getVersion()));
 		
 		this.getProxy().getPluginManager().registerListener(this, new UpdateChecker(this, this.messageManager, this.configManager.getCheckUpdate()));
-		
+
 		Metrics metrics = new Metrics(this, 11231);
 		metrics.addCustomChart(new Metrics.SimplePie("hub_command", this::HubCommandType));
 		metrics.addCustomChart(new Metrics.SimplePie("update_check", () -> configManager.getCheckUpdate() ? "true" : "false"));
